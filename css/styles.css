@@ -18,19 +18,114 @@ h6 {
   font-family: "Fjalla One", sans-serif;
 }
 
+/* --- FONTS ICON --- */
+
+@font-face {
+  font-family: "icomoon";
+  src: url("../fonts/icomoon.eot?lfqok0");
+  src: url("../fonts/icomoon.eot?lfqok0#iefix") format("embedded-opentype"),
+    url("../fonts/icomoon.ttf?lfqok0") format("truetype"),
+    url("../fonts/icomoon.woff?lfqok0") format("woff"),
+    url("../fonts/icomoon.svg?lfqok0#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icomoon" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-postgresql:before {
+  content: "\e905";
+  color: #336791;
+}
+.icon-python:before {
+  content: "\e906";
+  color: #3776ab;
+}
+.icon-react:before {
+  content: "\e907";
+  color: #61dafb;
+}
+.icon-javascript:before {
+  content: "\e908";
+  color: #f7df1e;
+}
+.icon-java:before {
+  content: "\e909";
+  color: #007396;
+}
+.icon-angular:before {
+  content: "\e90a";
+  color: #dd0031;
+}
+.icon-instagram:before {
+  content: "\e900";
+}
+.icon-github:before {
+  content: "\e901";
+}
+.icon-twitter:before {
+  content: "\e902";
+}
+.icon-facebook:before {
+  content: "\e903";
+}
+.icon-menu:before {
+  content: "\e904";
+}
+
 /* ---HEADER --- */
 
+.burger-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: none;
+  line-height: 40px;
+  text-align: center;
+  position: fixed;
+  z-index: 5;
+  left: 5px;
+  top: 5px;
+  color: white;
+  cursor: pointer;
+}
 .header {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 5px 120px;
-  /* background-color: #d8dad3; */
   background-color: #333133;
+}
+.header div {
+  display: flex;
+  align-items: center;
 }
 .header div .logo img {
   width: 80px;
+  margin-right: 20px;
+}
+.header div a {
+  font-size: 18px;
+  font-weight: 900;
+  color: #e6e8e6;
+  text-decoration: none;
 }
 .menu ul {
   display: flex;
@@ -40,7 +135,7 @@ h6 {
 .menu ul li {
   display: flex;
   justify-content: center;
-  margin-left: 60px;
+  margin-left: 20px;
   list-style: none;
   font-size: 18px;
   font-weight: bold;
@@ -62,6 +157,7 @@ h1 {
   letter-spacing: -0.2px;
   margin-left: 120px;
   color: white;
+  text-shadow: 1px 2px 2px #000000;
 }
 .hero strong {
   color: #080708;
@@ -73,7 +169,6 @@ h1 {
 }
 .hero .background-overlay {
   height: inherit;
-  /* background-color: rgba(255, 215, 0, 0.45); */
   background: linear-gradient(to left, transparent, rgba(255, 215, 0, 0.45));
   display: flex;
   align-items: center;
@@ -82,7 +177,9 @@ h1 {
 /* --- PORTAFOLIO --- */
 
 .portfolio {
-  margin: 50px 120px;
+  margin: 50px auto;
+  max-width: 1400px;
+  width: 80%;
 }
 .portfolio h2 {
   color: #3772ff;
@@ -104,6 +201,7 @@ h1 {
 }
 .project-details {
   display: flex;
+  width: 55%;
   flex-direction: column;
   margin-right: 30px;
   padding: 20px;
@@ -133,7 +231,7 @@ h1 {
 }
 .project-details,
 .project-imageContainer {
-  width: 50%;
+  width: 45%;
   height: inherit;
 }
 .project-imageContainer {
@@ -141,13 +239,15 @@ h1 {
   justify-content: center;
 }
 .project-image {
-  width: 350px;
+  max-width: 100%;
 }
 
 /* --- HERRAMIENTAS --- */
 
 .tools {
-  margin: 50px 120px;
+  margin: 50px auto;
+  max-width: 1400px;
+  width: 80%;
 }
 .tools h2 {
   color: #3772ff;
@@ -177,7 +277,12 @@ h1 {
   border-top-left-radius: 25px;
   border-bottom-right-radius: 25px;
 }
-.tool-img {
+.tool-list .tool i {
+  font-size: 120px;
+  margin-top: 20px;
+  color: black;
+}
+/* .tool-img {
   width: 120px;
   height: 120px;
   margin-top: 20px;
@@ -201,12 +306,22 @@ h1 {
 }
 .tool-img.php {
   background-image: url("./../assets/php.svg");
-}
+} */
+
+/* --- VIDEO --- */
+
+/* .html-video {
+  margin: 0 auto;
+  width: 80%;
+  height: auto;
+} */
 
 /* --- EXPERIENCIA --- */
 
 .experiences {
-  margin: 50px 120px;
+  margin: 50px auto;
+  max-width: 1400px;
+  width: 80%;
 }
 .experiences h2 {
   color: #3772ff;
@@ -272,7 +387,9 @@ h1 {
 /* --- CONTACTO --- */
 
 .contact {
-  margin: 50px 120px;
+  margin: 50px auto;
+  width: 80%;
+  max-width: 1400px;
 }
 .contact h2 {
   color: #3772ff;
@@ -282,6 +399,7 @@ h1 {
   justify-content: space-between;
   align-items: center;
   margin-top: 30px;
+  flex-wrap: wrap;
 }
 .contact-formEmail {
   height: 80px;
@@ -315,7 +433,18 @@ h1 {
   color: #3772ff;
   transition: 350ms all;
 }
-.social-link {
+.social {
+  padding-top: 7px;
+}
+.social a {
+  text-decoration: none;
+  margin-left: 8px;
+}
+.social a i {
+  font-size: 50px;
+  color: #000000;
+}
+/* .social-link {
   display: inline-block;
   width: 50px;
   height: 50px;
@@ -333,7 +462,7 @@ h1 {
 }
 .social-link.instagram {
   background-image: url("./../assets/instagram.svg");
-}
+} */
 
 /* --- FOOTER --- */
 
@@ -348,115 +477,176 @@ h1 {
   padding: 15px 0px;
 }
 
-/* --- RESPONSIVE --- */
+/* --- RESPONSIVE DESIGN --- */
 
-/* @media screen and (max-width: 900px) {
-  .header {
+@media screen and (max-width: 1023px) {
+}
+
+@media screen and (max-width: 767px) {
+  .burger-button {
     display: block;
-    padding: 10px 120px;
+  }
+  .header {
+    flex-direction: column;
+    padding: 5px 0;
+  }
+  .header div .logo img {
+    width: 50px;
+  }
+  .menu {
+    position: fixed;
+    background: rgba(51, 49, 51, 0.9);
+    z-index: 3;
+    top: 0;
+    left: -100vw;
+    bottom: 0;
+    width: 100vw;
+    transition: 0.3s;
+  }
+  .menu.is-active {
+    left: 0;
+  }
+  .menu ul {
+    flex-direction: column;
+    align-items: center;
+    height: inherit;
+    margin-top: 50px;
   }
   .menu ul li {
     margin-left: 0;
-    margin-right: 25px;
   }
-  .menu ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-  }
-  .header div .logo img {
-    width: 60px;
+  .menu ul li a {
+    height: 40px;
+    font-size: 1.5em;
   }
 
-  .project {
-    display: flex;
-    flex-direction: column;
+  .hero {
+    height: auto;
   }
-  .project-details {
-    width: 100%;
-    margin-bottom: 30px;
-  }
-
-  .exp {
-    width: 100%;
-  }
-
-  .social-link {
-    width: 30px;
-    height: 30px;
-    background-size: 30px 30px;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .header {
-    padding: 10px 20px;
-    display: flex;
-    justify-content: center;
-    font-size: 14px;
-  }
-  .menu ul {
-    display: none;
-  }
-  .menu ul li {
-    margin-right: 0;
-    padding: 5px;
-  }
-
   h1 {
-    font-size: 35px;
-    margin-left: 20px;
+    margin-left: 50px;
+    padding: 1em 0;
   }
 
   .portfolio {
-    margin: 50px 20px;
+    width: 90%;
+    margin: 20px auto;
   }
   .project {
-    padding: 30px 20px;
+    display: block;
+    padding: 20px 10px;
+    margin: 20px 0;
   }
   .project-details {
-    margin-right: 0;
+    width: auto;
+    margin: 0;
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+  .project-imageContainer {
+    width: auto;
+  }
+  .project-image {
+    width: 70%;
   }
   .project-title {
-    font-size: 20px;
-  }
-  .project-description {
-    font-size: 14px;
+    font-size: 1.5625em;
   }
 
   .tools {
-    margin: 50px 20px;
+    width: 90%;
+    margin: 20px auto;
   }
   .tool-list {
-    padding: 30px 20px;
+    padding: 20px 10px;
+    margin: 20px 0;
   }
   .tool {
-    width: 120px;
-    height: 180px;
-  }
-  .tool-title {
-    font-size: 16px;
-  }
-  .tool-img {
-    width: 90px;
-    height: 90px;
-    background-size: 90px 90px;
+    margin-right: 0;
   }
 
   .experiences {
-    margin: 50px 20px;
+    margin: 20px auto;
+    width: 90%;
+  }
+  .exp-list {
+    margin-top: 20px;
   }
   .exp {
     width: 100%;
   }
-  .exp-description {
-    font-size: 14px;
+
+  .contact {
+    margin: 30px auto;
   }
-  .exp-url {
-    font-size: 14px;
+}
+
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 1.5em;
+    margin-left: 1em;
+  }
+  h2 {
+    text-align: center;
+    font-size: 1.25em;
+  }
+
+  /* .portfolio h2 {
+    text-align: center;
+  } */
+  .project-details {
+    font-size: 13px;
+  }
+  .project-title,
+  .project-course {
+    margin-bottom: 0.3em;
+  }
+  .project-date,
+  .project-url,
+  .project-description {
+    margin-top: 0.2em;
+  }
+
+  /* .tools h2 {
+    text-align: center;
+  } */
+  .tool {
+    width: 45%;
+    height: 50%;
+  }
+  .tool h3 {
+    font-size: 0.8em;
+    margin-top: 1em;
+  }
+  .tool-list .tool i {
+    font-size: 70px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+  }
+
+  /* .experiences h2 {
+    text-align: center;
+  } */
+  .exp-details {
+    /* 1em = 16px */
+    margin: -2em 0.5em 0.5em;
+    padding: 1em;
   }
 
   .contact {
-    margin: 50px 20px;
+    width: 95%;
+    margin: 0 auto;
   }
-} */
+  /* .contact h2 {
+    text-align: center;
+  } */
+  .contact-container {
+    justify-content: center;
+  }
+  .social {
+    margin-top: 1em;
+  }
+}
+
+@media screen and (max-width: 320px) {
+}
